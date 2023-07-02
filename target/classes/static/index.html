@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>SportsHub</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+<noscript>
+    <h2>Sorry! Your browser doesn't support Javascript</h2>
+</noscript>
+<header class="header header--loggedIn">
+    <div class="container">
+        <a href="/" class="header__logo">
+            <img src="assets/ball.png" />
+            <h1>SportsHub</h1>
+        </a>
+        <nav class="header__menu">
+            <!-- Not Logged In -->
+            <!-- <a href="/login.html">
+              <img src="./assets/avatar.svg" />
+              <p>Account</p>
+            </a> -->
+
+            <!-- Logged In -->
+        </nav>
+    </div>
+</header>
+<main class="create-room layout">
+    <div class="container">
+        <div id="username-page">
+            <div class="username-page-container">
+                <div class="layout__boxHeader">
+                    <div class="layout__boxTitle">
+                        <!--<a href="index.html">
+                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                            <title>arrow-left</title>
+                            <path
+                              d="M13.723 2.286l-13.723 13.714 13.719 13.714 1.616-1.611-10.96-10.96h27.625v-2.286h-27.625l10.965-10.965-1.616-1.607z">
+                            </path>
+                          </svg>
+                        </a>-->
+                        <h3>Pick a sports topic</h3>
+                    </div>
+                </div>
+                <div class="layout__body">
+                    <form id="usernameForm" name="usernameForm">
+                        <div class="form__group">
+                            <label for="name">Enter a user name</label>
+                            <input type="text" id="name" placeholder="Username" autocomplete="off" />
+                        </div>
+                        <div class="form__group">
+                            <label for="topic">Enter a Topic</label>
+                            <input type="text" id="topic" placeholder="Enter a topic" autocomplete="off" />
+                        </div>
+                        <div class="form-group form__action">
+                            <button type="submit" class="btn btn--main">Start Chatting</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="chat-page" class="hidden">
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="layout__boxHeader">
+                <div class="layout__boxTitle">
+                    <a href="index.html">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                            <title>arrow-left</title>
+                            <path
+                                    d="M13.723 2.286l-13.723 13.714 13.719 13.714 1.616-1.611-10.96-10.96h27.625v-2.286h-27.625l10.965-10.965-1.616-1.607z">
+                            </path>
+                        </svg>
+                    </a>
+                    <h2><span id="sport">Sport</span> Group Chat</h2>
+                </div>
+            </div>
+        </div>
+        <div class="connecting">
+            Connecting...
+        </div>
+        <ul id="messageArea">
+
+        </ul>
+        <form class="form" id="messageForm" name="messageForm">
+            <div class="form-group">
+                <div class="input-group clearfix form__group">
+                    <input type="text" id="message" placeholder="Type a message..." autocomplete="off" />
+                    <button type="submit" class="btn btn--main">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="./js/sockjs.min.js"></script>
+<script src="./js/stomp.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
